@@ -1,0 +1,43 @@
+{
+  "name": "biome-rs-npm",
+  "version": "1.6.4",
+  "type": "module",
+  "description": "A toolchain for web projects, aimed to provide functionalities to maintain them. Biome offers formatter and linter, usable via CLI and LSP",
+  "author": "Davlatjon Shavkatov <opensource@dalisoft.uz>, David Sherret",
+  "files": [
+    "prepare.js"
+  ],
+  "main": "prepare.js",
+  "bin": {
+    "biome": "biome"
+  },
+  "engines": {
+    "node": ">=18.19.1"
+  },
+  "scripts": {
+    "postinstall": "node ./prepare.js"
+  },
+  "keywords": [
+    "javascript",
+    "css",
+    "json",
+    "formatter",
+    "typescript",
+    "web",
+    "static-code-analysis",
+    "jsx",
+    "linter"
+  ],
+  "dependencies": {
+    "binary2npm": "^0.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dalisoft/biome-rs-npm.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dalisoft/biome-rs-npm/issues"
+  },
+  "homepage": "https://github.com/dalisoft/biome-rs-npm#readme",
+  "license": "Apache-2.0"
+}
