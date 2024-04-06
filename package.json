@@ -1,6 +1,6 @@
 {
   "name": "biome-rs-npm",
-  "version": "1.6.4b",
+  "version": "1.6.4d",
   "type": "module",
   "description": "A toolchain for web projects, aimed to provide functionalities to maintain them. Biome offers formatter and linter, usable via CLI and LSP",
   "author": "Davlatjon Shavkatov <opensource@dalisoft.uz>, Biomejs Team",
@@ -29,7 +29,7 @@
     "linter"
   ],
   "dependencies": {
-    "binary2npm": "^0.2.0"
+    "binary2npm": "^0.3.0"
   },
   "repository": {
     "type": "git",
