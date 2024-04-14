@@ -11,11 +11,11 @@ Look at [official documentation](https://biomejs.dev)
 ## Installation
 
 ```sh
-npm install -g biome-rs-npm
+npm install dalisoft/biome-rs-npm -D
 # or
-yarn install -g biome-rs-npm
+yarn install dalisoft/biome-rs-npm -D
 # or
-bun add -g biome-rs-npm
+bun add dalisoft/biome-rs-npm -D
 ```
 
 ## Environment variables
