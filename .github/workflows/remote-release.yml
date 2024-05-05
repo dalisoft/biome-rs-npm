@@ -21,6 +21,7 @@ jobs:
           fetch-tags: true
           ref: master
           persist-credentials: true
+          token: ${{ secrets.GITHUB_TOKEN }}
       - name: Run script for fetch, test and release
         shell: bash
         env:
