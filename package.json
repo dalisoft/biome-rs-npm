@@ -1,6 +1,6 @@
 {
   "name": "biome-rs-npm",
-  "version": "1.7.1",
+  "version": "1.7.2",
   "type": "module",
   "description": "A toolchain for web projects, aimed to provide functionalities to maintain them. Biome offers formatter and linter, usable via CLI and LSP",
   "author": "Davlatjon Shavkatov <opensource@dalisoft.uz>, Biomejs Team",
