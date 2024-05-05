@@ -30,4 +30,5 @@ jobs:
           GPG_KEY_ID: ${{ vars.GPG_KEY_ID }}
           GPG_KEY: ${{ secrets.GPG_KEY }}
           GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: curl -fsSL https://raw.githubusercontent.com/dalisoft/ci-scripts/master/fetch-and-release-update.sh | sh
