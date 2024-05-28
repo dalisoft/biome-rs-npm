@@ -15,4 +15,5 @@ await prepare({
   remoteToken: process.env.GITHUB_TOKEN,
   binary: "biome",
   orders: ["binary", "os", "arch"],
+  stableOnly: true
 });
