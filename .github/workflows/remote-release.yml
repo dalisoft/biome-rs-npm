@@ -8,6 +8,7 @@ on:
 env:
   repository: biomejs/biome
   project: biome
+  TAG_PREFIX: cli
 
 jobs:
   remote-release:
