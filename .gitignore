@@ -3,3 +3,4 @@ biome
 .DS_Store
 node_modules
 bun.lockb
+package.json.bak

@@ -5,17 +5,13 @@
   "description": "A toolchain for web projects, aimed to provide functionalities to maintain them. Biome offers formatter and linter, usable via CLI and LSP",
   "author": "Davlatjon Shavkatov <opensource@dalisoft.uz>, Biomejs Team",
   "files": [
-    "prepare.js"
+    "bin.sh"
   ],
-  "main": "prepare.js",
   "bin": {
-    "biome": "biome"
+    "biome": "bin.sh"
   },
   "engines": {
     "node": ">=18.19.1"
-  },
-  "scripts": {
-    "postinstall": "node ./prepare.js"
   },
   "keywords": [
     "javascript",
@@ -28,8 +24,15 @@
     "jsx",
     "linter"
   ],
-  "dependencies": {
-    "binary2npm": "https://github.com/dalisoft/binary2npm#v0.4.2"
+  "optionalDependencies": {
+    "@biomejs/cli-win32-x64": "1.8.3",
+    "@biomejs/cli-win32-arm64": "1.8.3",
+    "@biomejs/cli-darwin-x64": "1.8.3",
+    "@biomejs/cli-darwin-arm64": "1.8.3",
+    "@biomejs/cli-linux-x64": "1.8.3",
+    "@biomejs/cli-linux-arm64": "1.8.3",
+    "@biomejs/cli-linux-x64-musl": "1.8.3",
+    "@biomejs/cli-linux-arm64-musl": "1.8.3"
   },
   "repository": {
     "type": "git",
