@@ -24,4 +24,4 @@ elif echo "${CURRENT_DIR}" | grep -q ".bin"; then
 fi
 
 # Run currently until next run
-"${BIOME_BIN}" "@"
+"${BIOME_BIN}" "$@"
