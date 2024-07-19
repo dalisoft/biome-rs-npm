@@ -19,6 +19,8 @@ fi
 if test -f "${CURRENT_DIR}/package.json"; then
   sed -i.bak "s|bin.sh|${BIOME_BIN}|g" "${CURRENT_DIR}/package.json"
   rm -rf "package.json.bak"
+elif echo "${CURRENT_DIR}" | grep -q ".bin"; then
+  ln -sf "${BIOME_BIN}" "$0"
 fi
 
 # Run currently until next run
