@@ -11,11 +11,15 @@ BIOME_BIN=$(find . -iname "${BINARY_NAME}" | grep -s "${BINARY_NAME_SCOPE}")
 BIOME_BIN=$(realpath -q "${BIOME_BIN}")
 
 # Make it executable
-chmod +x "${BIOME_BIN}"
+if test -f "${BIOME_BIN}"; then
+  chmod +x "${BIOME_BIN}"
+fi
 
 # Replace binary in `bin` field for later use
-sed -i.bak "s|bin.sh|${BIOME_BIN}|g" "${CURRENT_DIR}/package.json"
-rm -rf "package.json.bak"
+if test -f "${CURRENT_DIR}/package.json"; then
+  sed -i.bak "s|bin.sh|${BIOME_BIN}|g" "${CURRENT_DIR}/package.json"
+  rm -rf "package.json.bak"
+fi
 
 # Run currently until next run
 "${BIOME_BIN}"
