@@ -2,12 +2,35 @@
 set -eu
 
 CURRENT_DIR=$(dirname "$0")
+IS_X_CALL=false
+CACHE_DIR="."
 
 BINARY_NAME='biome'
 BINARY_NAME_SCOPE='@biomejs/cli-'
 
+# Test if calling via `npx` or `bunx`
+if "$(echo pwd)" | grep -q ".bun/install/cache"; then
+  IS_X_CALL=true
+  CACHE_DIR=$(bun pm cache ls)
+elif "$(echo pwd)" | grep -q ".npm/_npx"; then
+  IS_X_CALL=true
+  CACHE_DIR=$(dirname "$(pwd)")
+fi
+
 # Search and find binary
-BIOME_BIN=$(find . -iname "${BINARY_NAME}" | grep -s "${BINARY_NAME_SCOPE}")
+if $IS_X_CALL; then
+  BIOME_BIN=$(find "${CACHE_DIR}" -iname "${BINARY_NAME}" | grep -s "${BINARY_NAME_SCOPE}" || echo "")
+else
+  BIOME_BIN=$(find . -iname "${BINARY_NAME}" | grep -s "${BINARY_NAME_SCOPE}" || echo "")
+fi
+
+# Check node_modules
+if [ -z "${BIOME_BIN}" ]; then
+  echo "\`node_modules\` was not installed"
+  exit 1
+fi
+
+# Trim variables after success checks
 BIOME_BIN=$(realpath -q "${BIOME_BIN}")
 
 # Make it executable
