@@ -25,7 +25,7 @@
     "linter"
   ],
   "optionalDependencies": {
-    "@biomejs/cli-win32-x64": "1.8.3",
+    "@biomejs/cli-win32-x64": "1.9.0",
     "@biomejs/cli-win32-arm64": "1.8.3",
     "@biomejs/cli-darwin-x64": "1.8.3",
     "@biomejs/cli-darwin-arm64": "1.8.3",
