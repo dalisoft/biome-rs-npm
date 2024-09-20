@@ -30,7 +30,7 @@
     "@biomejs/cli-darwin-x64": "1.9.1",
     "@biomejs/cli-darwin-arm64": "1.9.1",
     "@biomejs/cli-linux-x64": "1.9.1",
-    "@biomejs/cli-linux-arm64": "1.9.1",
+    "@biomejs/cli-linux-arm64": "1.9.2",
     "@biomejs/cli-linux-x64-musl": "1.9.1",
     "@biomejs/cli-linux-arm64-musl": "1.9.2"
   },
