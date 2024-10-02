@@ -26,7 +26,7 @@
   ],
   "optionalDependencies": {
     "@biomejs/cli-win32-x64": "1.9.3",
-    "@biomejs/cli-win32-arm64": "1.9.2",
+    "@biomejs/cli-win32-arm64": "1.9.3",
     "@biomejs/cli-darwin-x64": "1.9.3",
     "@biomejs/cli-darwin-arm64": "1.9.3",
     "@biomejs/cli-linux-x64": "1.9.3",
